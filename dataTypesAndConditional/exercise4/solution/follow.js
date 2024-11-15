@@ -52,7 +52,10 @@ lastName = "Stevenson"
 birthYear = 1947;
 thisYear = 1965;
 
-greeting = `Hello! My name is ${firstName} ${lastName} and I am ${thisYear - birthYear} years old.`
+let fullName = firstName + " " + lastName;
+let age = thisYear - birthYear;
+
+greeting = `Hello! My name is ${fullName} and I am ${age} years old.`
 
 console.log(greeting)
 
@@ -88,25 +91,26 @@ console.log(greeting)
 
 // Test Step 2: 
 
-module.exports = {
-  testGroup: "a",
-  greeting,
-  birthYear,
-  thisYear,
-  firstName,
-  lastName
-}
+
+// module.exports = {
+//   testGroup: "a",
+//   greeting,
+//   birthYear,
+//   thisYear,
+//   firstName,
+//   lastName
+// }
 
 
 // Test Step 3: (Don't forget to comment out lines under Test Step 2)
 
-// module.exports = {
-// 	testGroup: "b",
-// 	greeting,
-// 	birthYear,
-// 	thisYear,
-// 	firstName,
-// 	lastName,
-// 	fullName,
-// 	age
-// }
+module.exports = {
+	testGroup: "b",
+	greeting,
+	birthYear,
+	thisYear,
+	firstName,
+	lastName,
+	fullName,
+	age
+}
