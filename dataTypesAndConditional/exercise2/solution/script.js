@@ -8,7 +8,7 @@
 number = Number(prompt("enter a number"));
 
 function numberChecker() {
-	if(number === 6) {
+	if(number > 10 || number === 10) {
 		return true;
 	} else {
 		return false;
