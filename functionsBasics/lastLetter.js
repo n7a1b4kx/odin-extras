@@ -3,7 +3,7 @@
 let userInput = prompt("Please enter a string:");
 
 function lastLetter(userInput) {
-    return userInput[-1];
+    return userInput.charAt(userInput.length -1);
 }
 
 lastLetter(userInput);
