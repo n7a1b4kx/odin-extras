@@ -43,4 +43,6 @@ container.appendChild(holder);
 // event listener
 
 const btn = document.querySelector("#btn");
-btn.onClick = () => alert("Hi! Idiot.....");
+btn.addEventListener("Click", () => {
+    alert("Hi! Idiot^_*");
+});
