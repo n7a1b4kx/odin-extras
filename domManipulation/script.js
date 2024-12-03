@@ -23,3 +23,19 @@ heading3.setAttribute("style", "color: blue; text-align: center;");
 
 container.appendChild(heading3);
 
+const holder = document.createElement("div");
+holder.classList.add("content");
+holder.setAttribute("style", "background-color: pink; border: 2px solid black;");
+
+const heading1 = document.createElement("h1");
+heading1.classList.add("heading");
+heading1.textContent = "I'm in a div";
+
+const parag = document.createElement("p");
+parag.classList.add("paragraph");
+parag.textContent = "ME TOO!";
+
+holder.appendChild(heading1);
+holder.appendChild(parag);
+
+container.appendChild(holder);
