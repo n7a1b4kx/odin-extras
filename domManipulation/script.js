@@ -39,3 +39,8 @@ holder.appendChild(heading1);
 holder.appendChild(parag);
 
 container.appendChild(holder);
+
+// event listener
+
+const btn = document.querySelector("#btn");
+btn.onClick = () => alert("Hi! Idiot.....");
