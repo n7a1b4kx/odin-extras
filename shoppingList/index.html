@@ -37,14 +37,26 @@
       const button = document.querySelector("button");
       const logElement = document.getElementById("log");
 
-      
+      const listItem = document.createElement("li");
+      listItem.classList.add("list item");
+
+      const span = document.createElement("span");
+      span.classList.add("item container");
+
+      const delButton = document.createElement("button");
+      delButton.setAttribute("id", "delete");
+
+      listItem.appendChild(span);
+      listItem.appendChild(delButton);
 
       inputElement.addEventListener("keyup", () => {
         logElement.innerText = `Item: ${inputElement.value}`;
       });
 
-      function addItem() {
+      function addItem(span, delButton) {
         let item = inputElement.value;
+        span.innerText = item;
+        delButton.innerText = 'Delete';
         inputElement.value = '';
       }
 
