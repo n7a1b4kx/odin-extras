@@ -18,22 +18,28 @@
   </head>
   <body>
 
-    <h1>My shopping list</h1>
+    <main>
+      <h1>My shopping list</h1>
 
-    <div>
-      <label for="item">Enter a new item:</label>
-      <input type="text" name="item" id="item">
-      <button>Add item</button>
-    </div>
+      <div>
+        <label for="item">Enter a new item:</label>
+        <input type="text" name="item" id="item">
+        <button>Add item</button>
+      </div>
+      <pre id="log"></pre>
+      <ul>
 
-    <ul>
-
-    </ul>
-
+      </ul>
+    </main>
     <script>
       const UL = document.querySelector("ul");
-      const input = document.querySelector("#input");
+      const inputElement = document.getElementById("item");
       const button = document.querySelector("button");
+      const logElement = document.getElementById("log");
+
+      inputElement.addEventListener("keyup", () => {
+        logElement.innerText = `Item: ${inputElement.value}`;
+      });
 
     </script>
   </body>
