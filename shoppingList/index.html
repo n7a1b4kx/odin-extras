@@ -37,9 +37,16 @@
       const button = document.querySelector("button");
       const logElement = document.getElementById("log");
 
+      
+
       inputElement.addEventListener("keyup", () => {
         logElement.innerText = `Item: ${inputElement.value}`;
       });
+
+      function addItem() {
+        let item = inputElement.value;
+        inputElement.value = '';
+      }
 
     </script>
   </body>
