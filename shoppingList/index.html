@@ -45,19 +45,21 @@
 
       const delButton = document.createElement("button");
       delButton.setAttribute("id", "delete");
-
-      listItem.appendChild(span);
-      listItem.appendChild(delButton);
+      delButton.addEventListener("click", () => {listItem.remove();
+      });
 
       inputElement.addEventListener("keyup", () => {
         logElement.innerText = `Item: ${inputElement.value}`;
       });
 
-      function addItem(span, delButton) {
+      function addItem() {
         let item = inputElement.value;
         span.innerText = item;
         delButton.innerText = 'Delete';
         inputElement.value = '';
+        listItem.appendChild(span);
+        listItem.appendChild(delButton);
+        UL.appendChild(listItem);
       }
 
     </script>
