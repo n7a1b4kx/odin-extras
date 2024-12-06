@@ -53,14 +53,14 @@
       //   logElement.innerText = `Item: ${inputElement.value}`;
       // });
 
-      span.textContent = item;
+      span.textContent = itemName;
       delButton.textContent = 'Delete';
       listItem.appendChild(span);
       listItem.appendChild(delButton);
       UL.appendChild(listItem);
 
       button.addEventListener("click", () => {
-        let item = inputElement.value;
+        let itemName = inputElement.value;
         inputElement.value = '';
         inputElement.focus();
       });
