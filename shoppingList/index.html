@@ -60,9 +60,13 @@
 
         listText.textContent = itemName;
         delButton.textContent = 'Delete';
-        listItem.appendChild(listText);
-        listItem.appendChild(delButton);
-        UL.appendChild(listItem);
+        if (listText.textContent.length > 0) {
+          listItem.appendChild(listText);
+          listItem.appendChild(delButton);
+          UL.appendChild(listItem);
+        } else {
+          alert("Please enter a value before adding to the list!!!");
+        }
       });
 
     </script>
