@@ -33,9 +33,9 @@
     </main>
     <script>
       const UL = document.querySelector("ul");
-      const inputElement = document.getElementById("item");
+      const inputElement = document.querySelector("#item");
       const button = document.querySelector("button");
-      const logElement = document.getElementById("log");
+      const logElement = document.querySelector("#log");
 
       const listItem = document.createElement("li");
       listItem.classList.add("list-item");
@@ -45,7 +45,8 @@
 
       const delButton = document.createElement("button");
       delButton.setAttribute("id", "delete");
-      delButton.addEventListener("click", () => {listItem.remove();
+      delButton.addEventListener("click", () => {
+        listItem.remove();
       });
 
       // inputElement.addEventListener("keyup", () => {
@@ -63,6 +64,7 @@
       }
       button.addEventListener("click", () => {
         addItem();
+        inputElement.focus();
       });
     </script>
   </body>
