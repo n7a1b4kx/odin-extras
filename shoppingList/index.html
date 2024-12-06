@@ -53,19 +53,18 @@
       //   logElement.innerText = `Item: ${inputElement.value}`;
       // });
 
-      function addItem() {
-        let item = inputElement.value;
-        span.innerText = item;
-        delButton.innerText = 'Delete';
-        inputElement.value = '';
-        listItem.appendChild(span);
-        listItem.appendChild(delButton);
-        UL.appendChild(listItem);
-      }
+      span.textContent = item;
+      delButton.textContent = 'Delete';
+      listItem.appendChild(span);
+      listItem.appendChild(delButton);
+      UL.appendChild(listItem);
+
       button.addEventListener("click", () => {
-        addItem();
+        let item = inputElement.value;
+        inputElement.value = '';
         inputElement.focus();
       });
+
     </script>
   </body>
 </html>
