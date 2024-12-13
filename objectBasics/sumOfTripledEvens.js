@@ -1,6 +1,6 @@
 // using arrays methods to recreate this func
 
-```
+/*
 function sumOfTripledEvens(array) {
     let sum = 0;
     for (let i = 0; i < array.length; i++) {
@@ -15,9 +15,9 @@ function sumOfTripledEvens(array) {
     }
     return sum;
 }
-```
-// here is my implementation
+*/
 
+// here is my implementation
 function isEven(number) {
     return number % 2 === 0;
 }
@@ -27,7 +27,14 @@ function getTripled(number) {
 }
 
 function sumOfTripledEvens(array) {
-    let sum = 0;
     let arr = array.filter(isEven);
     arr = arr.map(getTripled);
+    let sum = arr.reduce((total, currentItem) => {
+        return total + currentItem;
+    }, 0);
+    return sum;
 }
+
+const arr = [1, 2, 3, 4, 5];
+
+console.log(sumOfTripledEvens(arr));
