@@ -22,6 +22,12 @@ function isEven(number) {
     return number % 2 === 0;
 }
 
+function getTripled(number) {
+    return number * 3;
+}
+
 function sumOfTripledEvens(array) {
-    
+    let sum = 0;
+    let arr = array.filter(isEven);
+    arr = arr.map(getTripled);
 }
