@@ -15,16 +15,16 @@
         <div id="container">
             <form action="" method="post" id="survey-form">
                 <fieldset>
-                    <label for="name">Name</label>
+                    <label id="name-label" for="name">Name</label>
                     <input placeholder="Enter your name" type="text" name="name" id="name" required>
-                    <label for="email">Email</label>
+                    <label for="email" id="email-label">Email</label>
                     <input placeholder="Enter your email" type="email" name="email" id="email" required>
-                    <label for="age">Age</label>
-                    <input placeholder="Age" type="number" name="age" id="age" min="13" max="120">
+                    <label for="age" id="number-label">Age</label>
+                    <input placeholder="Age" type="number" name="age" id="number" min="13" max="120">
                 </fieldset>
                 <fieldset>
-                    <label for="role-type">Which option best describes your current role?</label>
-                    <select name="role-type" id="role-type">
+                    <label for="dropdown">Which option best describes your current role?</label>
+                    <select name="role-type" id="dropdown">
                         <option value="">Select current role</option>
                         <option value="1">Student</option>
                         <option value="2">Full Time Job</option>
@@ -36,18 +36,18 @@
                 <fieldset>
                     <label for="referrel">Would you recommend freeCodeCamp to a friend?</label>
                 <label for="definitely">
-                    <input type="radio" name="referrel" id="definitely" checked> Definitely
+                    <input type="radio" name="referrel" id="definitely" checked value="definitely"> Definitely
                 </label>
                 <label for="maybe">
-                    <input type="radio" name="referrel" id="maybe"> Maybe
+                    <input type="radio" name="referrel" id="maybe" value="maybe"> Maybe
                 </label>
                 <label for="not-sure">
-                    <input type="radio" name="referrel" id="not-sure"> Not Sure
+                    <input type="radio" name="referrel" id="not-sure" value="not-sure"> Not Sure
                 </label>
                 </fieldset>
                 <fieldset>
-                    <label for="feature-option">What is your favorite feature of freeCodeCamp?</label>
-                    <select name="feature" id="feature-option">
+                    <label for="dropdown">What is your favorite feature of freeCodeCamp?</label>
+                    <select name="feature" id="dropdown">
                         <option value="">Select an option</option>
                         <option value="1">Challenges</option>
                         <option value="2">Projects</option>
@@ -57,37 +57,37 @@
                 </fieldset>
                 <fieldset>
                     <label for="improve">What would you like to see improved? (Check all that apply)</label>
-                    <label for="front-end"><input type="checkbox" name="improve" id="front-end"> Front-end Projects</label>
-                    <label for="back-end"><input type="checkbox" name="improve" id="back-end"> Back-end Projects</label>
-                    <label for="data-visual"><input type="checkbox" name="improve" id="data-visual"> Data Visualization</label>
-                    <label for="challenge"><input type="checkbox" name="improve" id="challenge"> Challenges</label>
+                    <label for="front-end"><input type="checkbox" name="improve" value="front-end" id="front-end"> Front-end Projects</label>
+                    <label for="back-end"><input type="checkbox" value="back-end" name="improve" id="back-end"> Back-end Projects</label>
+                    <label for="data-visual"><input value="data-visual" type="checkbox" name="improve" id="data-visual"> Data Visualization</label>
+                    <label for="challenge"><input type="checkbox" name="improve" id="challenge" value="challenge"> Challenges</label>
                     <label for="open-source">
-                        <input type="checkbox" name="improve" id="open-source"> Open Source Community
+                        <input type="checkbox" name="improve" id="open-source" value="open-source"> Open Source Community
                     </label>
                     <label for="gitter">
-                        <input type="checkbox" name="improve" id="gitter"> Gitter help rooms
+                        <input type="checkbox" name="improve" value="gitter" id="gitter"> Gitter help rooms
                     </label>
                     <label for="vid">
-                        <input type="checkbox" name="improve" id="vid"> Videos
+                        <input type="checkbox" value="vid" name="improve" id="vid"> Videos
                     </label>
                     <label for="city-meetups">
-                        <input type="checkbox" name="improve" id="city-meetups"> City Meetups
+                        <input type="checkbox" name="improve" id="city-meetups" value="city-meetups"> City Meetups
                     </label>
                     <label for="wiki">
-                        <input type="checkbox" name="improve" id="wiki"> Wiki
+                        <input type="checkbox" name="improve" value="wiki" id="wiki"> Wiki
                     </label>
                     <label for="forum">
-                        <input type="checkbox" name="improve" id="forum"> forum
+                        <input value="forum" type="checkbox" name="improve" id="forum"> forum
                     </label>
                     <label for="additional">
-                        <input type="checkbox" name="improve" id="additional"> Additional Courses</label>
+                        <input value="additional-courses" type="checkbox" name="improve" id="additional"> Additional Courses</label>
                 </fieldset>
                 <fieldset>
                     <label for="comment">Any comments or suggestions?</label>
                     <textarea placeholder="Enter your comment here..." id="comments">
                     </textarea>
                 </fieldset>
-                <input type="submit" value="Submit">
+                <input type="submit" value="Submit" id="submit">
             </form>
         </div>
     </main>
