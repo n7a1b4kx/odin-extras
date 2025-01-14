@@ -52,3 +52,9 @@ form {
     flex-direction: column;
     gap: 8px;
 }
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
