@@ -7,7 +7,7 @@ function book(title, author, pages, read) {
     this.pages = pages;
     this.read = read;
     this.info = function() {
-        console.log(`${title} by ${author}, ${pages} pages, ${read}.`)
+        return `${title} by ${author}, ${pages} pages, ${read}.`;
     };
 }
 
